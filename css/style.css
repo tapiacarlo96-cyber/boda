@@ -4,7 +4,7 @@
   --gold: #d4af64;
   --cream: #f5f0e8;
   --dark: #1a1410;
-  --serif: 'Cormorant Garamond', serif;
+  --serif: 'Playfair Display', serif;     /* títulos */
   --sans: 'Lato', sans-serif;
 }
 
@@ -22,7 +22,7 @@ body { font-family: var(--sans); background: var(--dark); color: var(--cream); }
   text-transform: uppercase;
   padding: 0.6rem 1.5rem;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 .music-btn:hover { background: rgba(212,175,100,0.1); }
 .music-btn.playing { opacity: 0.5; }
@@ -59,6 +59,31 @@ body { font-family: var(--sans); background: var(--dark); color: var(--cream); }
 
 .date { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: rgba(212,175,100,0.9); }
 .place { font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: rgba(245,240,232,0.6); margin-top: 0.4rem; }
+
+.fotos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: flex-end; 
+  height: 300px; 
+  animation: slideUp 2s ease both;
+}
+
+.fotos img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  
+}
+
+.fotos img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  
+}
 
 /* ── COUNTDOWN ── */
 .countdown-section {

@@ -12,7 +12,7 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// ── MÚSICA ──
+//MUSICA
 const music = document.getElementById('bgMusic');
 const btn = document.getElementById('musicBtn');
 
@@ -27,15 +27,15 @@ btn.addEventListener('click', () => {
     btn.textContent = '♪ Reproducir música';
     btn.classList.remove('playing');
   }
-});                        // ← el botón cierra acá
+});                        
 
-// ── ANIMACIONES SCROLL ──
+// ANIMACION
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.50 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
